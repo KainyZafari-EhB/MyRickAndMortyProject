@@ -1,18 +1,49 @@
 # Rick and Morty API Explorer
 
-Een webapplicatie om Rick and Morty-personages, afleveringen en locaties te verkennen, met favorieten-functionaliteit.  
-Gemaakt met vanilla JavaScript, HTML en CSS.
+**Let op: Dit is een schoolproject.**  
+Deze webapplicatie is gemaakt als opdracht voor school en dient ter oefening van webdevelopment met JavaScript, HTML en CSS.
 
 ---
 
-## Functies
+## Over dit project
 
-- Blader door alle personages, afleveringen en locaties van de Rick and Morty API
-- Filter en zoek personages op naam, status, soort en geslacht
-- Bekijk gedetailleerde informatie per personage, aflevering en locatie
-- Voeg personages, afleveringen en locaties toe aan je favorieten (opgeslagen in je browser)
-- Responsieve, moderne kaart-gebaseerde interface
-- Home-scherm met snelle navigatie
+Met deze webapp kun je alles ontdekken over de wereld van Rick and Morty. Je kunt personages, afleveringen en locaties bekijken, filteren en favorieten opslaan. De app gebruikt de [Rick and Morty API](https://rickandmortyapi.com/) en werkt volledig in je browser.
+
+---
+
+## Wat kun je met deze website?
+
+Hieronder vind je een overzicht van de stappen en mogelijkheden van de website:
+
+1. **Homepagina**
+   - Je komt binnen op een overzichtelijke homepagina met knoppen naar de verschillende onderdelen van de site.
+
+2. **Navigatie**
+   - Bovenaan staat altijd een navigatiebalk waarmee je snel kunt wisselen tussen Home, Personages, Afleveringen, Locaties en Favorieten.
+
+3. **Personages**
+   - Bekijk een overzicht van alle Rick and Morty-personages.
+   - Filter op naam, status, soort en geslacht.
+   - Klik op een kaart om meer details te zien van een personage.
+   - Voeg een personage toe aan je favorieten via de ⭐-knop.
+
+4. **Afleveringen**
+   - Bekijk een lijst van alle afleveringen.
+   - Klik op een aflevering voor meer details, inclusief een lijst van alle personages in die aflevering.
+   - Voeg een aflevering toe aan je favorieten via de ⭐-knop.
+
+5. **Locaties**
+   - Ontdek alle locaties uit de serie.
+   - Klik op een locatie voor meer details, inclusief een overzicht van de bewoners.
+   - Voeg een locatie toe aan je favorieten via de ⭐-knop.
+
+6. **Favorieten**
+   - Bekijk je favoriete personages, afleveringen en locaties op één pagina.
+   - Verwijder favorieten eenvoudig met de "Remove"-knop.
+   - Favorieten worden opgeslagen in de localStorage van je browser.
+
+7. **Responsief ontwerp**
+   - De website werkt goed op zowel desktop als mobiel.
 
 ---
 
@@ -20,7 +51,7 @@ Gemaakt met vanilla JavaScript, HTML en CSS.
 
 ### Vereisten
 
-- [Node.js](https://nodejs.org/) (voor het draaien van een lokale server, optioneel maar aanbevolen)
+- [Node.js](https://nodejs.org/) (voor het draaien van een lokale server, optioneel)
 - Een moderne webbrowser (Chrome, Firefox, Edge, etc.)
 
 ### Installatie
