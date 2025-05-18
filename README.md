@@ -86,7 +86,6 @@ src/
     locations.js
     mangas.js
   images/
-    (je eigen afbeeldingen, indien gewenst)
 ```
 
 ---
@@ -100,16 +99,6 @@ src/
 
 ---
 
-## Aanpassen
-
-- **Afbeeldingen:**  
-  Plaats je eigen afbeeldingen in de map `src/images/` en verwijs ernaar in `style.css` voor aangepaste achtergronden.
-
-- **Stijlen:**  
-  Alle stijlen staan in `style.css`. Je kunt kleuren, lettertypes en het uiterlijk van de kaarten naar wens aanpassen.
-
----
-
 ## Afhankelijkheden
 
 - [Rick and Morty API](https://rickandmortyapi.com/)
@@ -120,7 +109,6 @@ src/
 ## Credits
 
 - [Rick and Morty API](https://rickandmortyapi.com/)
-- [Unsplash](https://unsplash.com/) en [Wikimedia Commons](https://commons.wikimedia.org/) voor achtergrondafbeeldingen
 - [Google Fonts](https://fonts.google.com/) voor Montserrat en Bebas Neue
 
 ---
@@ -128,21 +116,15 @@ src/
 ## Licentie
 
 Dit project is bedoeld voor educatieve doeleinden.  
-Zie [LICENSE](LICENSE) indien aanwezig.
 
 ---
 
 ## Auteur
 
-- [Jouw naam of GitHub-gebruikersnaam](https://github.com/yourusername)
+- [KainyZafari-EhB](https://github.com/KainyZafari-EhB)
 
 ---
 
-## Screenshots
-
-_Voeg hier screenshots van je app toe!_
-
----
 
 ## Problemen oplossen
 
