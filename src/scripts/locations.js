@@ -20,7 +20,7 @@ async function renderLocations() {
     window.allLocations = allLocations;
 
     document.getElementById('app').innerHTML = `
-      <button onclick="navigateTo('')" style="margin-bottom:1rem;">🏠 Home</button>
+      <button onclick="navigateTo('')" style="margin-bottom:1rem;">⬅ Back to Home</button>
       <h2>Locations</h2>
       <div class="grid">
         ${allLocations.map((l, i) => `
@@ -54,7 +54,7 @@ window.showLocationDetails = async function(index) {
   document.getElementById('app').innerHTML = `
     <button onclick="renderLocations()" style="margin-bottom:1rem;">⬅ Back to list</button>
     <button onclick="addFavorite('locations', ${index})" style="margin-bottom:1rem;">Add to Favorites</button>
-    <button onclick="navigateTo('')" style="margin-bottom:1rem;">🏠 Home</button>
+    <button onclick="navigateTo('')" style="margin-bottom:1rem;">⬅ Back to Home</button>
     <div class="location-details" style="max-width:700px;margin:auto;background:white;padding:2rem;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,0.2);color:#222;">
       <h2>${l.name}</h2>
       <p><strong>Type:</strong> ${l.type || 'Unknown'}</p>

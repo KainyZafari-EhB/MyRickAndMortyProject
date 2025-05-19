@@ -96,6 +96,10 @@ h3 {
   to { opacity: 1; transform: translateX(0);}
 }
 
+.begroeting {
+  text-align: center;
+}
+
 .grid {
   display: flex;
   flex-wrap: wrap;
@@ -366,7 +370,7 @@ button:focus-visible {
 }
 
 .home-card h3 {
-  color: #222 !important;
+  color: #ffffff !important;
   text-shadow: none;
   font-family: 'Bebas Neue', 'Montserrat', Arial, sans-serif;
 }
@@ -374,7 +378,7 @@ button:focus-visible {
 .home-card h3,
 .home-card p {
   background: none;
-  color: #222 !important;
+  color: #ffffff !important;
   text-shadow: none;
   border-radius: 0;
   padding: 0;
@@ -400,13 +404,13 @@ button:focus-visible {
 }
 
 .home-characters {
-  background: url('images/CharactersRickAndMorty.webp') center/cover no-repeat;
+  background: url('/images/CharactersRickAndMorty.webp') center/cover no-repeat;
 }
 .home-episodes {
-  background: url('images/RickAndMortyEpisodes.webp') center/cover no-repeat;
+  background: url('/images/RickAndMortyEpisodes.webp') center/cover no-repeat;
 }
 .home-locations {
-  background: url('images/CitadelRickAndMorty.webp') center/cover no-repeat;
+  background: url('/images/CitadelRickAndMorty.webp') center/cover no-repeat;
 }
 
 .home-card::after {

@@ -29,7 +29,7 @@ async function renderCharacters(filters = {}) {
         && (!filters.gender || c.gender === filters.gender);
     });
 
-    // Unieke opties voor dropdowns
+    // opties voor dropdowns
     const statuses = [...new Set(allCharacters.map(c => c.status).filter(Boolean))];
     const species = [...new Set(allCharacters.map(c => c.species).filter(Boolean))];
     const genders = [...new Set(allCharacters.map(c => c.gender).filter(Boolean))];
@@ -140,3 +140,20 @@ async function showCharacterOfTheDay() {
 }
 
 showCharacterOfTheDay();
+
+// Observer API: Houd wijzigingen in het #app element bij
+const targetNode = document.getElementById('app');
+const config = { childList: true, subtree: true };
+
+const callback = function(mutationsList, observer) {
+  for (const mutation of mutationsList) {
+    if (mutation.type === 'childList') {
+      console.log('De inhoud van #app is gewijzigd door een API-actie.');
+    }
+  }
+};
+
+const observer = new MutationObserver(callback);
+if (targetNode) {
+  observer.observe(targetNode, config);
+}

@@ -1,53 +1,94 @@
 # Rick and Morty API Explorer
 
-**Let op: Dit is een schoolproject.**  
+**Dit is een schoolproject.**  
 Deze webapplicatie is gemaakt als opdracht voor school en dient ter oefening van webdevelopment met JavaScript, HTML en CSS.
 
 ---
 
-## Over dit project
+## Projectbeschrijving
 
 Met deze webapp kun je alles ontdekken over de wereld van Rick and Morty. Je kunt personages, afleveringen en locaties bekijken, filteren en favorieten opslaan. De app gebruikt de [Rick and Morty API](https://rickandmortyapi.com/) en werkt volledig in je browser.
 
 ---
 
-## Wat kun je met deze website?
+## Functionaliteiten
 
-Hieronder vind je een overzicht van de stappen en mogelijkheden van de website:
-
-1. **Homepagina**
-   - Je komt binnen op een overzichtelijke homepagina met knoppen naar de verschillende onderdelen van de site.
-
-2. **Navigatie**
-   - Bovenaan staat altijd een navigatiebalk waarmee je snel kunt wisselen tussen Home, Personages, Afleveringen, Locaties en Favorieten.
-
-3. **Personages**
-   - Bekijk een overzicht van alle Rick and Morty-personages.
-   - Filter op naam, status, soort en geslacht.
-   - Klik op een kaart om meer details te zien van een personage.
-   - Voeg een personage toe aan je favorieten via de ⭐-knop.
-
-4. **Afleveringen**
-   - Bekijk een lijst van alle afleveringen.
-   - Klik op een aflevering voor meer details, inclusief een lijst van alle personages in die aflevering.
-   - Voeg een aflevering toe aan je favorieten via de ⭐-knop.
-
-5. **Locaties**
-   - Ontdek alle locaties uit de serie.
-   - Klik op een locatie voor meer details, inclusief een overzicht van de bewoners.
-   - Voeg een locatie toe aan je favorieten via de ⭐-knop.
-
-6. **Favorieten**
-   - Bekijk je favoriete personages, afleveringen en locaties op één pagina.
-   - Verwijder favorieten eenvoudig met de "Remove"-knop.
-   - Favorieten worden opgeslagen in de localStorage van je browser.
-
-7. **Responsief ontwerp**
-   - De website werkt goed op zowel desktop als mobiel.
+- Homepagina met navigatie naar alle onderdelen
+- Overzicht en detailpagina's voor personages, afleveringen en locaties
+- Filteren van personages op naam, status, soort en geslacht
+- Toevoegen/verwijderen van favorieten (personages, afleveringen, locaties)
+- Favorieten worden opgeslagen in localStorage
+- Responsief ontwerp voor mobiel en desktop
 
 ---
 
-## Aan de slag
+## Gebruikte API's
+
+- [Rick and Morty API](https://rickandmortyapi.com/)
+
+---
+
+## Checklist concepten gebruikt
+
+**DOM manipulatie:**  
+- Elementen selecteren  
+  `document.getElementById('app')` (`src/scripts/main.js`, regel 8)
+- Elementen manipuleren  
+  `document.getElementById('app').innerHTML = ...` (`src/scripts/characters.js`, regel 31)
+- Events aan elementen koppelen  
+  `window.addEventListener('hashchange', router);` (`src/scripts/main.js`, regel 61)
+
+**Modern JavaScript:**  
+- Gebruik van constanten  
+  `const response = await fetch(url);` (`src/scripts/characters.js`, regel 8)
+- Template literals  
+  `` `<h2>${c.name}</h2>` `` (`src/scripts/characters.js`, regel 54)
+- Iteratie over arrays  
+  `allCharacters.map((c, i) => ...)` (`src/scripts/characters.js`, regel 31)
+- Array methodes  
+  `.filter()` (`src/scripts/characters.js`, regel 18)
+- Arrow functions  
+  `c => c.name.toLowerCase().includes(...)` (`src/scripts/characters.js`, regel 18)
+- Conditional (ternary) operator  
+  `${c.status || 'Unknown'}` (`src/scripts/characters.js`, regel 57)
+- Callback functions  
+  `.map(url => fetch(url).then(res => res.json()))` (`src/scripts/episodes.js`, regel 41)
+- Promises  
+  `fetch(url).then(res => res.json())` (`src/scripts/episodes.js`, regel 41)
+- Async & Await  
+  `async function fetchAllCharacters() { ... }` (`src/scripts/characters.js`, regel 6)
+- Observer API  
+  `MutationObserver` houdt wijzigingen in het hoofdscherm bij (`src/scripts/main.js`, einde bestand)
+
+**Data & API:**  
+- Fetch om data op te halen  
+  `fetch('https://rickandmortyapi.com/api/character')` (`src/scripts/characters.js`, regel 7)
+- JSON manipuleren en weergeven  
+  `const data = await response.json();` (`src/scripts/characters.js`, regel 9)
+
+**Opslag & validatie:**  
+- Formulier validatie  
+  Filterformulier validatie (`src/scripts/characters.js`, regel 17)
+- Gebruik van LocalStorage  
+  `localStorage.getItem('favorites')` (`src/scripts/main.js`, regel 19)
+
+**Styling & layout:**  
+- Basis HTML layout (flexbox of CSS grid)  
+  `<div class="grid">...</div>` (`src/scripts/characters.js`, regel 32)
+- Basis CSS  
+  Algemene styling (`src/style.css`)
+- Gebruiksvriendelijke elementen (verwijderknoppen, icoontjes,...)  
+  ⭐-knoppen (`src/scripts/characters.js`, regel 36)
+
+**Tooling & structuur:**  
+- Project is opgezet met Vite  
+  Zie installatie-instructies hieronder
+- Een correcte folderstructuur wordt aangehouden  
+  Zie de mapstructuur onder "Projectstructuur"
+
+---
+
+## Installatiehandleiding
 
 ### Vereisten
 
@@ -90,32 +131,39 @@ src/
 
 ---
 
-## Gebruik
+## Screenshots van de applicatie
 
-- Gebruik de navigatiebalk bovenaan om te wisselen tussen Home, Personages, Afleveringen, Locaties en Favorieten.
-- Klik op een kaart om meer details te bekijken.
-- Klik op de ⭐-knop op een kaart of in detailweergave om toe te voegen aan favorieten.
-- Favorieten worden opgeslagen in de localStorage van je browser en zijn te beheren via de Favorieten-pagina.
-
----
-
-## Afhankelijkheden
-
-- [Rick and Morty API](https://rickandmortyapi.com/)
-- Geen externe JS-afhankelijkheden; alleen vanilla JS, HTML en CSS.
+![Screenshot of the home screen](/images/screenshots/image.png)
+![Screenshot of characters screen](/images/screenshots/image2.png)
+![Screenshot of a character card](/images/screenshots/image3.png)
+![Screenshot of episodes screen](/images/screenshots/image4.png)
+![Screenshot of a episode card](/images/screenshots/image5.png)
+![Screenshot van het locations scherm](/images/screenshots/image6.png)
+![Screenshot van een locations kaart](/images/screenshots/image7.png)
+![Screenshot van favorieten scherm](/images/screenshots/image8.png)
 
 ---
 
-## Credits
+## Credits & Bronvermelding
 
 - [Rick and Morty API](https://rickandmortyapi.com/)
 - [Google Fonts](https://fonts.google.com/) voor Montserrat en Bebas Neue
+- [ChatGPT](https://chatgpt.com)
+- [CoPilot](https://github.com/copilot)
 
 ---
 
+## Gebruik van AI
+
+![Chatlog AI](/images/AIScreenshots/image-1.png)
+![ChatlogAI](/images/AIScreenshots/image-2.png)
+![ChatlogAI](/images/AIScreenshots/image.png)
+![Chatlog AI](/images/AIScreenshots/image3.png)
+[Link naar ChatGPT Gesprek](https://chatgpt.com/share/682b06c3-7c00-800e-b7dd-ad17c4354df2)
+
 ## Licentie
 
-Dit project is bedoeld voor educatieve doeleinden.  
+Dit project is bedoeld voor educatieve doeleinden.
 
 ---
 
@@ -124,7 +172,6 @@ Dit project is bedoeld voor educatieve doeleinden.
 - [KainyZafari-EhB](https://github.com/KainyZafari-EhB)
 
 ---
-
 
 ## Problemen oplossen
 

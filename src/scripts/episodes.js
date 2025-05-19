@@ -20,7 +20,7 @@ async function renderEpisodes() {
     window.allEpisodes = allEpisodes;
 
     document.getElementById('app').innerHTML = `
-      <button onclick="navigateTo('')" style="margin-bottom:1rem;">🏠 Home</button>
+      <button onclick="navigateTo('')" style="margin-bottom:1rem;">⬅ Back to Home</button>
       <h2>Episodes</h2>
       <div class="grid">
         ${allEpisodes.map((e, i) => `
